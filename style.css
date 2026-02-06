@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap');
+@font-face {
+  font-family: 'Flemish Script';
+  src: url('Flemish Script Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 body {
   margin: 0;
@@ -6,7 +14,7 @@ body {
   font-family: 'Merriweather', serif;
   color: #3a2f24;
   
-  /* Just the background image, no overlay */
+  /* Background image with no overlay so it’s fully visible */
   background-image: url('https://www.characrosstheworld.com/wp-content/uploads/2025/03/IMG_4160-1024x768.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -19,7 +27,7 @@ body {
 
 .container {
   max-width: 640px;
-  /* Translucent white background so text is readable */
+  /* Semi-transparent white so text stands out */
   background: rgba(255, 250, 245, 0.85);
   margin: 50px auto;
   padding: 40px 50px;
@@ -55,7 +63,7 @@ header {
 }
 
 h1 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Flemish Script', cursive;
   font-size: 3.4rem;
   color: #b58900; /* Rich gold */
   margin: 0;
@@ -64,7 +72,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Flemish Script', cursive;
   font-size: 4.2rem;
   margin: 10px 0 5px;
   color: #b58900;
@@ -92,7 +100,7 @@ a:hover {
 }
 
 h3 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Flemish Script', cursive;
   color: #a97c00;
   font-size: 2rem;
   margin-bottom: 18px;
