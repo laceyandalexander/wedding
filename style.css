@@ -4,23 +4,23 @@ body {
   margin: 0;
   padding: 30px 20px;
   font-family: 'Merriweather', serif;
-  color: #f9f6f0;
-  /* Background image with dark overlay */
-  background-image: 
-    linear-gradient(rgba(20, 15, 10, 0.6), rgba(20, 15, 10, 0.6)),
-    url('https://www.characrosstheworld.com/wp-content/uploads/2025/03/IMG_4160-1024x768.jpg');
+  color: #3a2f24;
+  
+  /* Just the background image, no overlay */
+  background-image: url('https://www.characrosstheworld.com/wp-content/uploads/2025/03/IMG_4160-1024x768.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
 }
 
 .container {
   max-width: 640px;
-  background: rgba(255, 250, 245, 0.95);
+  /* Translucent white background so text is readable */
+  background: rgba(255, 250, 245, 0.85);
   margin: 50px auto;
   padding: 40px 50px;
   border-radius: 16px;
@@ -28,7 +28,6 @@ body {
   border: 3px solid #d4af37; /* Glamorous gold border */
   position: relative;
   overflow: hidden;
-  color: #3a2f24;
   z-index: 1;
 }
 
