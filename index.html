@@ -2,71 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lacey & Alexander’s Wedding Invitation</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Lacey & Alexander</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Typewriter-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Special Elite', 'Courier New', monospace;
+      color: #ffffff;
+    }
+
+    .background {
+      min-height: 100vh;
+      background-image: url("https://i.pinimg.com/736x/e4/80/ff/e480ffcf993ea38398f04b96c74d72f7.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .content {
+      max-width: 720px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 3rem 2.5rem;
+      border-radius: 2px;
+      line-height: 1.7;
+    }
+
+    .content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .link {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      .content p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>You are invited to celebrate</h1>
-      <h2>Lacey & Alexander’s Wedding</h2>
-      <p class="date-location">
-        June 26 at 
-        <a href="https://www.reginamuerren.ch/home-english/" target="_blank" rel="noopener">
-          Hotel Regina
-        </a> 
-        in Mürren, Switzerland
+  <div class="background">
+    <div class="content">
+      <p>You are invited to celebrate Lacey &amp; Alexander’s wedding</p>
+
+      <p>
+        June 26 at Hotel Regina in Mirren, Switzerland.
       </p>
-    </header>
 
-    <section class="schedule">
-      <h3>Wedding Day Schedule - June 26</h3>
-      <ul>
-        <li><span class="time">(Time)</span> - Welcome-drink at the terrace</li>
-        <li><span class="time">(Time)</span> - Short hike</li>
-        <li><span class="time">(Time)</span> - Ceremony</li>
-        <li><span class="time">(Time)</span> - Dinner</li>
-        <li><span class="time">(Time)</span> - After Party at <em>(Bar open the longest)</em></li>
-      </ul>
-    </section>
+      <p>
+        We are delighted to host our guests at Hotel Regina for the night.
+      </p>
 
-    <section class="dress-code">
-      <h3>Dress Code</h3>
-      <p>Please dress elegantly to celebrate with us.</p>
-    </section>
+      <p>
+        Wear something you feel pretty in, with comfortable shoes.
+      </p>
 
-    <section class="accommodation">
-      <h3>Accommodation</h3>
-      <p>We are delighted to host our guests at Hotel Regina for the night.</p>
-    </section>
-
-    <section class="rsvp">
-      <h3>RSVP</h3>
-      <p>Please confirm your attendance <a href="mailto:laceyandalexander@example.com">via email</a> or through <a href="#">this link</a>.</p>
-    </section>
-
-    <section class="directions">
-      <h3>How to reach Hotel Regina</h3>
-      <ul>
-        <li><strong>From US:</strong> (directions or notes)</li>
-        <li><strong>From Sweden:</strong> (directions or notes)</li>
-        <li><strong>From France:</strong> (directions or notes)</li>
-      </ul>
-    </section>
-
-    <section class="transport">
-      <h3>Transportation</h3>
-      <p>We drive a car with X seats back and forth from Amsterdam. Let us know if you want to join us (or we simply plan this with our family).</p>
-    </section>
-
-    <section class="links">
-      <h3>Useful Links</h3>
-      <ul>
-        <li><a href="https://www.reginamuerren.ch/home-english/" target="_blank" rel="noopener">Hotel Regina’s Website</a></li>
-        <li><a href="#" target="_blank" rel="noopener">More things to do in the area</a></li>
-      </ul>
-    </section>
+      <p class="link">
+        How to reach Hotel Regina
+      </p>
+    </div>
   </div>
 </body>
 </html>
