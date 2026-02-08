@@ -5,7 +5,7 @@
   <title>Lacey & Alexander</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Typewriter-style font -->
+  <!-- Typewriter font -->
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
   <style>
@@ -21,7 +21,7 @@
 
     body {
       font-family: 'Special Elite', 'Courier New', monospace;
-      color: #ffffff;
+      color: #000;
     }
 
     .background {
@@ -33,27 +33,18 @@
 
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      justify-content: flex-start;
+      padding: 4rem;
     }
 
     .content {
-      max-width: 720px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.45);
-      padding: 3rem 2.5rem;
-      border-radius: 2px;
-      line-height: 1.7;
+      max-width: 900px;
     }
 
     .content p {
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-      letter-spacing: 0.02em;
-    }
-
-    .content p:last-child {
-      margin-bottom: 0;
+      font-size: 60px;
+      line-height: 1.25;
+      margin-bottom: 2.5rem;
     }
 
     .link {
@@ -61,13 +52,15 @@
       cursor: pointer;
     }
 
-    @media (max-width: 600px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
+    @media (max-width: 900px) {
       .content p {
-        font-size: 0.95rem;
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .content p {
+        font-size: 30px;
       }
     }
   </style>
