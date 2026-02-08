@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Lacey & Alexander</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Typewriter font -->
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
@@ -17,41 +17,32 @@
 
     html, body {
       height: 100%;
-      overflow: hidden;
+    }
+
+    body {
       font-family: 'Special Elite', 'Courier New', monospace;
       color: #000;
     }
 
-    /* YouTube video background styling */
-    .video-background {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 100vw;
-      height: 100vh;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      overflow: hidden;
-    }
+    .background {
+      min-height: 100vh;
+      background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/2155082/original_f481c60cf160a77782d1b1391e90528b.jpg?1525875214?bc=1");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-    .video-background iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 177.78vh; /* 100 * (16/9) */
-      height: 100vh;
-      transform: translate(-50%, -50%);
-      pointer-events: none; /* makes it non-interactive */
-    }
-
-    /* Content */
-    .content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       padding: 4rem;
-      max-width: 90%;
+    }
+
+    .content {
+      max-width: 1200px;
     }
 
     .content p {
-      font-size: 40px;
+      font-size: 28px;
       line-height: 1.3;
       margin-bottom: 2rem;
     }
@@ -75,25 +66,26 @@
   </style>
 </head>
 <body>
+  <div class="background">
+    <div class="content">
+      <p>You are invited to celebrate Lacey &amp; Alexander’s wedding</p>
 
-  <!-- YouTube Background Video -->
-  <div class="video-background">
-    <iframe
-      src="https://www.youtube.com/embed/0_jNjpVxUt0?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=0_jNjpVxUt0"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
+      <p>
+        June 26 at Hotel Regina in Mürren, Switzerland.
+      </p>
+
+      <p>
+        We are delighted to host our guests at Hotel Regina for the night.
+      </p>
+
+      <p>
+        Wear something you feel pretty in, with comfortable shoes.
+      </p>
+
+      <p class="link">
+        How to reach Hotel Regina
+      </p>
+    </div>
   </div>
-
-  <!-- Page Content -->
-  <div class="content">
-    <p>You are invited to celebrate Lacey &amp; Alexander’s wedding</p>
-    <p>June 26 at Hotel Regina in Mirren, Switzerland.</p>
-    <p>We are delighted to host our guests at Hotel Regina for the night.</p>
-    <p>Wear something you feel pretty in, with comfortable shoes.</p>
-    <p class="link">How to reach Hotel Regina</p>
-  </div>
-
 </body>
 </html>
