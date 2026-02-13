@@ -1,4 +1,4 @@
-/* 1. Custom Font Face */
+/* 1. Custom Font */
 @font-face {
     font-family: 'Flemish Script Regular';
     src: url('Flemish Script Regular.woff') format('woff');
@@ -19,7 +19,7 @@ body {
     position: relative;
 }
 
-/* 3. Top Centered Menu */
+/* 3. Navigation Menu */
 .nav-menu {
     position: fixed;
     top: 40px;
@@ -41,11 +41,34 @@ body {
     transition: transform 0.3s ease;
 }
 
-.nav-menu a:hover {
-    transform: scale(1.1);
+/* 4. Hover Image Logic (The Pop-up Clock) */
+.menu-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-/* 4. Clouds Background */
+.hover-image {
+    position: fixed;    /* Centers relative to the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 350px;       /* Large center display */
+    height: auto;
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;      /* Above clouds and marquee */
+}
+
+.menu-item:hover .hover-image {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* 5. Clouds Background */
 .clouds-background {
     position: absolute;
     top: 0;
@@ -73,14 +96,13 @@ body {
 .pos3 { top: 40%; animation-duration: 40s; animation-delay: -12s; }
 .pos4 { top: 60%; animation-duration: 55s; animation-delay: -30s; }
 .pos5 { top: 80%; animation-duration: 50s; animation-delay: -18s; }
-.pos6 { top: 15%; animation-duration: 65s; animation-delay: -40s; }
 
 @keyframes float {
     from { transform: translateX(-100px); }
     to { transform: translateX(calc(100vw + 600px)); }
 }
 
-/* 5. Marquee Text Styles */
+/* 6. Marquee Text */
 .marquee {
     position: relative;
     z-index: 2;
@@ -113,16 +135,14 @@ body {
 
 .spacer { padding: 0 100px; }
 
-/* 6. MOBILE FIXES */
+/* 7. Mobile Fixes */
 @media (max-width: 600px) {
     .nav-menu {
         top: 20px;
-        flex-direction: column; /* Stacks menu vertically */
+        flex-direction: column; 
         gap: 5px;
-        
-        /* These two lines fix the centering issue */
-        width: 100%; 
-        align-items: center; 
+        width: 100%;
+        align-items: center;
     }
 
     .nav-menu a {
@@ -132,54 +152,9 @@ body {
     .glow-text {
         font-size: 20px; 
     }
-}
 
-/* 7. Hover Image Logic */
-
-.menu-item {
-    position: relative; /* This keeps the image anchored to the link */
-    display: inline-block;
-}
-
-/* Ensure the container stays centered and doesn't expand */
-.menu-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-/* The Image Styling */
-.hover-image {
-    position: absolute;
-    top: 100%;          /* Sits right below the text */
-    width: 120px;       /* Forces a small size */
-    height: auto;
-    
-    /* Hiding logic */
-    opacity: 0;
-    visibility: hidden; 
-    pointer-events: none;
-    
-    /* Aesthetics */
-    transition: all 0.4s ease-in-out;
-    border-radius: 50%; /* Makes it circular if it's a clock */
-    box-shadow: 0 0 15px #ffb6c1;
-    z-index: 100;
-}
-
-/* Hover Trigger */
-.menu-item:hover .hover-image {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(10px); /* Small dip down animation */
-}
-
-/* MOBILE: Important to prevent the image from breaking the layout on phones */
-@media (max-width: 600px) {
+    /* Keep pop-up image hidden on mobile */
     .hover-image {
-        display: none !important; /* Forces it to stay gone on mobile */
-    }
-    .menu-item {
-        display: block; /* Keeps the stacked look on mobile */
+        display: none !important;
     }
 }
