@@ -1,1 +1,40 @@
+/* Standard Desktop Menu */
+.nav-menu {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+    display: flex;
+    flex-direction: row; /* Row for desktop */
+    gap: 50px;
+    white-space: nowrap;
+    text-align: center;
+}
 
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Flemish Script Regular', cursive;
+    font-size: 42px;
+    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 600px) {
+    .nav-menu {
+        top: 20px; /* Bring it up a bit higher */
+        flex-direction: column; /* Stack vertically */
+        gap: 10px; /* Reduce gap so it fits */
+        width: 100%; /* Ensure it centers properly */
+    }
+
+    .nav-menu a {
+        font-size: 30px; /* Smaller font so it doesn't overflow */
+    }
+
+    .glow-text {
+        font-size: 22px; /* Slightly smaller marquee text for mobile */
+    }
+}
