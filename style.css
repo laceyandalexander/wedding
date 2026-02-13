@@ -141,30 +141,45 @@ body {
     display: inline-block;
 }
 
+/* Ensure the container stays centered and doesn't expand */
+.menu-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* The Image Styling */
 .hover-image {
     position: absolute;
-    top: 60px;          /* Positions the image below the text */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;       /* Adjust size as you like */
+    top: 100%;          /* Sits right below the text */
+    width: 120px;       /* Forces a small size */
     height: auto;
-    opacity: 0;         /* Hidden by default */
-    pointer-events: none; /* Prevents the image from interfering with clicks */
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #ffb6c1; /* Matching pink glow */
+    
+    /* Hiding logic */
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none;
+    
+    /* Aesthetics */
+    transition: all 0.4s ease-in-out;
+    border-radius: 50%; /* Makes it circular if it's a clock */
+    box-shadow: 0 0 15px #ffb6c1;
     z-index: 100;
 }
 
-/* The Magic: When menu-item is hovered, show the image */
+/* Hover Trigger */
 .menu-item:hover .hover-image {
     opacity: 1;
-    transform: translateX(-50%) translateY(10px); /* Slight slide down effect */
+    visibility: visible;
+    transform: translateY(10px); /* Small dip down animation */
 }
 
-/* Hide hover images on mobile so they don't block the stacked menu */
+/* MOBILE: Important to prevent the image from breaking the layout on phones */
 @media (max-width: 600px) {
     .hover-image {
-        display: none;
+        display: none !important; /* Forces it to stay gone on mobile */
+    }
+    .menu-item {
+        display: block; /* Keeps the stacked look on mobile */
     }
 }
