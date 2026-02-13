@@ -157,4 +157,25 @@ body {
     .hover-image {
         display: none !important;
     }
+    .hover-image {
+    position: fixed;    
+    top: 50vh;          /* Explicitly 50% of the screen height */
+    left: 50vw;         /* Explicitly 50% of the screen width */
+    transform: translate(-50%, -50%) scale(0.8);
+    
+    width: 400px;       /* Made it a bit larger for center-stage feel */
+    height: auto;
+    opacity: 0;
+    visibility: hidden; 
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;      
+}
+
+.menu-item:hover .hover-image {
+    opacity: 1;
+    visibility: visible;
+    /* Translate -50% -50% is vital to keep it perfectly centered */
+    transform: translate(-50%, -50%) scale(1); 
+}
 }
