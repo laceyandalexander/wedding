@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>˚｡⋆ shift reality instantly ~ very powerful ⋆｡˚</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>˚｡⋆ Lacey & Alexander ⋆｡˚</title>
     <style>
-        /* The site uses a "void" black background */
+        /* Sky blue background */
         body {
-            background-color: black;
-            color: white;
+            background-color: #87CEEB; 
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrollbars from appearing */
+            overflow: hidden; 
             height: 100vh;
             display: flex;
             align-items: center;
-            font-family: serif;
+            font-family: "Times New Roman", serif;
+            position: relative;
         }
 
-        /* The "Glow" effect seen on the site */
-        .glow-text {
-            white-space: nowrap;
-            font-size: 24px;
-            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
-            letter-spacing: 2px;
+        /* Container for the floating clouds */
+        .clouds-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Behind the text */
+            pointer-events: none;
         }
 
-        /* The Animation that makes the text shift across the screen */
+        .cloud {
+            position: absolute;
+            background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            animation: float linear infinite;
+        }
+
+        /* Different cloud sizes and speeds */
+        .cloud-1 { width: 400px; height: 250px; top: 10%; left: -400px; animation-duration: 50s; }
+        .cloud-2 { width: 300px; height: 180px; top: 50%; left: -300px; animation-duration: 35s; animation-delay: -10s; }
+        .cloud-3 { width: 500px; height: 300px; top: 70%; left: -500px; animation-duration: 65s; animation-delay: -5s; }
+
+        @keyframes float {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(calc(100vw + 500px)); }
+        }
+
+        /* Horizontal Marquee Text */
         .marquee {
+            position: relative;
+            z-index: 2; /* In front of clouds */
             display: flex;
             width: 100%;
             overflow: hidden;
@@ -36,7 +61,18 @@
             display: flex;
             flex-shrink: 0;
             min-width: 100%;
-            animation: scroll-left 60s linear infinite;
+            animation: scroll-left 45s linear infinite;
+        }
+
+        .glow-text {
+            white-space: nowrap;
+            font-size: 32px;
+            color: #fff;
+            /* Pink glow that stands out against blue */
+            text-shadow: 0 0 10px #ffc0cb, 0 0 20px #ffb6c1, 0 0 40px #ff69b4;
+            letter-spacing: 3px;
+            font-style: italic;
+            font-weight: bold;
         }
 
         @keyframes scroll-left {
@@ -44,23 +80,32 @@
             to { transform: translateX(-100%); }
         }
 
-        .symbols {
-            margin: 0 20px;
-            opacity: 0.8;
-        }
+        .spacer { padding: 0 50px; }
     </style>
 </head>
 <body>
 
+    <div class="clouds-background">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
     <div class="marquee">
         <div class="scroll">
             <span class="glow-text">
-                ･*⋆｡˚☽˚｡⋆ ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･ 
-              On June 26th, 2026, Lacey & Alexander are getting married. You are warmly welcome to join us for three intimate days (June 25-27) at Hotel Regina in Mürren, Switzerland.
-                ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･*☽˚｡⋆*･
+                ･*⋆｡˚☽˚｡⋆ On June 26th, 2026, Lacey & Alexander are getting married. You are warmly welcome to join us for three intimate days (June 25-27) at Hotel Regina in Mürren, Switzerland. ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･
             </span>
+            <span class="spacer"></span>
         </div>
-
+        
+        <div class="scroll">
+            <span class="glow-text">
+                ･*⋆｡˚☽˚｡⋆ On June 26th, 2026, Lacey & Alexander are getting married. You are warmly welcome to join us for three intimate days (June 25-27) at Hotel Regina in Mürren, Switzerland. ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･
+            </span>
+            <span class="spacer"></span>
+        </div>
+    </div>
 
 </body>
 </html>
