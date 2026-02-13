@@ -133,3 +133,38 @@ body {
         font-size: 20px; 
     }
 }
+
+/* 7. Hover Image Logic */
+
+.menu-item {
+    position: relative; /* This keeps the image anchored to the link */
+    display: inline-block;
+}
+
+.hover-image {
+    position: absolute;
+    top: 60px;          /* Positions the image below the text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;       /* Adjust size as you like */
+    height: auto;
+    opacity: 0;         /* Hidden by default */
+    pointer-events: none; /* Prevents the image from interfering with clicks */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ffb6c1; /* Matching pink glow */
+    z-index: 100;
+}
+
+/* The Magic: When menu-item is hovered, show the image */
+.menu-item:hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px); /* Slight slide down effect */
+}
+
+/* Hide hover images on mobile so they don't block the stacked menu */
+@media (max-width: 600px) {
+    .hover-image {
+        display: none;
+    }
+}
