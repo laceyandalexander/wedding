@@ -1,65 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>˚｡⋆ shift reality instantly ~ very powerful ⋆｡˚</title>
     <style>
+        /* The site uses a "void" black background */
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: serif;
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: black;
+            color: white;
             margin: 0;
-            text-align: center;
-            padding: 20px;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars from appearing */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            font-family: serif;
         }
 
-        .symbol-border {
-            color: #fff;
-            font-size: 1.2rem;
-            margin: 15px 0;
+        /* The "Glow" effect seen on the site */
+        .glow-text {
+            white-space: nowrap;
+            font-size: 24px;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
             letter-spacing: 2px;
-            /* This gives the symbols that soft "dreamy" glow */
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-            opacity: 0.9;
         }
 
-        .affirmation-text {
-            max-width: 700px;
-            line-height: 2;
-            font-size: 1.1rem;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            margin: 20px 0;
+        /* The Animation that makes the text shift across the screen */
+        .marquee {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
         }
 
-        /* Subtle fade-in animation for that "shifting" feel */
-        .fade-in {
-            animation: fadeIn 3s ease-in;
+        .scroll {
+            display: flex;
+            flex-shrink: 0;
+            min-width: 100%;
+            animation: scroll-left 60s linear infinite;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        @keyframes scroll-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        .symbols {
+            margin: 0 20px;
+            opacity: 0.8;
         }
     </style>
 </head>
-<body class="fade-in">
+<body>
 
-    <div class="symbol-border">
-        ･*⋆｡˚☽˚｡⋆ ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･
-    </div>
-
-    <div class="affirmation-text">
-        ˚｡⋆ i can shift, i am prepared to shift, i can shift realities easily, i have successfully shifted, i am not attached to this physical body, i am more than the matter that makes up this body, i am not attached to any reality, i am pure consciousness, i have the ability to shift, i am focused on shifting, i will shift successfully, i can shift successfully, i am able to shift successfully, i am confident in my ability to shift, i am in my desired reality, i am already in my desired reality, i know i am in my desired reality, i know i can shift successfully, i'm shifting, i know i'm shifting, i'm shifting right now, i know i have successfully shifted, i am in my desired reality, i have succeeded at shifting to my desired reality, i know i have succeeded at shifting, i have successfully shifted to my desired reality, i'm happy to be in my desired reality, i'm grateful to be in my desired reality, i'm thankful to be in my desired reality, i am shifting to my desired reality, i can shift to my desired reality easily, i know i will shift to my desired reality, i know i have the power to shift, i will wake up in my desired reality, i have shifted realities, i know i have shifted realities, i can shift realities with ease, i am going to go to my desired reality, i have faith in shifting realities, it is easy to shift realities, i know i am going to go to my desired reality, i know i have shifted realities, i am capable of shifting realities, i'm finally in my desired reality, i am a master shifter, i am in my ideal reality ⋆｡˚
-    </div>
-
-    <div class="symbol-border">
-        ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･*☽˚｡⋆*･
+    <div class="marquee">
+        <div class="scroll">
+            <span class="glow-text">
+                ･*⋆｡˚☽˚｡⋆ ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･ 
+               sired reality, i have shifted realities, i know i have shifted realities, i can shift realities with ease, i am going to go to my desired reality, i have faith in shifting realities, it is easy to shift realities, i know i am going to go to my desired reality, i know i have shifted realities, i am capable of shifting realities, i'm finally in my desired reality, i am a master shifter, i am in my ideal reality 
+                ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･*☽˚｡⋆*･
+            </span>
+        </div>
+        
+        <div class="scroll">
+            <span class="glow-text">
+                ･*⋆｡˚☽˚｡⋆ ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･ 
+                i can shift, i am prepared to shift, i can shift realities easily, i have successfully shifted, i am not attached to this physical body, i am more than the matter that makes up this body, i am not attached to any reality, i am pure consciousness...
+            </span>
+        </div>
     </div>
 
 </body>
