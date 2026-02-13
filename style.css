@@ -119,13 +119,17 @@ body {
         top: 20px;
         flex-direction: column; /* Stacks menu vertically */
         gap: 5px;
+        
+        /* These two lines fix the centering issue */
+        width: 100%; 
+        align-items: center; 
     }
 
     .nav-menu a {
-        font-size: 28px; /* Smaller script font */
+        font-size: 28px; 
     }
 
     .glow-text {
-        font-size: 20px; /* Smaller marquee text */
+        font-size: 20px; 
     }
 }
