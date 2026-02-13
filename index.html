@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>˚｡⋆ Lacey & Alexander ⋆｡˚</title>
     <style>
-        /* Richer Cerulean Blue */
         body {
             background-color: #4A90E2; 
             margin: 0;
@@ -18,7 +17,7 @@
             position: relative;
         }
 
-        /* Container for the floating clouds */
+        /* Cloud Background Setup */
         .clouds-background {
             position: absolute;
             top: 0;
@@ -35,40 +34,27 @@
             background-repeat: no-repeat;
             opacity: 0.6;
             animation: float linear infinite;
+            left: -500px; /* Start off-screen */
         }
 
-        /* Unique Cloud 1 (Original) */
-        .cloud-1 { 
-            background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png');
-            width: 450px; height: 280px; 
-            top: 10%; 
-            animation-duration: 50s; 
-        }
+        /* Using the two preferred cloud images across 6 different layers */
+        .c1 { background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png'); width: 400px; height: 250px; }
+        .c2 { background-image: url('https://pngimg.com/d/cloud_PNG112234.png'); width: 500px; height: 300px; }
 
-        /* Unique Cloud 2 (Vecteezy source) */
-        .cloud-2 { 
-            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/041/453/392/small/sky-cloud-on-transparent-background-png.png');
-            width: 350px; height: 200px; 
-            top: 40%; 
-            animation-duration: 35s; 
-            animation-delay: -15s;
-        }
-
-        /* Unique Cloud 3 (Alternative PNGimg source) */
-        .cloud-3 { 
-            background-image: url('https://pngimg.com/d/cloud_PNG112234.png');
-            width: 550px; height: 350px; 
-            top: 65%; 
-            animation-duration: 60s; 
-            animation-delay: -5s;
-        }
+        /* Individual Cloud Placements and Timing */
+        .pos1 { top: 5%;  animation-duration: 40s; animation-delay: -5s; }
+        .pos2 { top: 25%; animation-duration: 55s; animation-delay: -20s; }
+        .pos3 { top: 45%; animation-duration: 35s; animation-delay: -10s; }
+        .pos4 { top: 60%; animation-duration: 50s; animation-delay: -35s; }
+        .pos5 { top: 80%; animation-duration: 45s; animation-delay: -15s; }
+        .pos6 { top: 15%; animation-duration: 60s; animation-delay: -45s; }
 
         @keyframes float {
-            from { transform: translateX(-100vw); }
-            to { transform: translateX(100vw); }
+            from { transform: translateX(-100px); }
+            to { transform: translateX(calc(100vw + 600px)); }
         }
 
-        /* Horizontal Marquee Text */
+        /* Marquee Text Layer */
         .marquee {
             position: relative;
             z-index: 2;
@@ -81,14 +67,13 @@
             display: flex;
             flex-shrink: 0;
             min-width: 100%;
-            animation: scroll-left 45s linear infinite;
+            animation: scroll-left 40s linear infinite;
         }
 
         .glow-text {
             white-space: nowrap;
             font-size: 32px;
             color: #fff;
-            /* Tightened pink halo */
             text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
             letter-spacing: 2px;
             font-style: italic;
@@ -100,31 +85,28 @@
             to { transform: translateX(-100%); }
         }
 
-        .spacer { padding: 0 60px; }
+        .spacer { padding: 0 100px; }
     </style>
 </head>
 <body>
 
     <div class="clouds-background">
-        <div class="cloud cloud-1"></div>
-        <div class="cloud cloud-2"></div>
-        <div class="cloud cloud-3"></div>
+        <div class="cloud c1 pos1"></div>
+        <div class="cloud c2 pos2"></div>
+        <div class="cloud c1 pos3"></div>
+        <div class="cloud c2 pos4"></div>
+        <div class="cloud c1 pos5"></div>
+        <div class="cloud c2 pos6"></div>
     </div>
 
     <div class="marquee">
-        <div class="scroll">
-            <span class="glow-text">
-            On June 26th, 2026, Lacey & Alexander are getting married. You are warmly welcome to join us for three intimate days (June 25-27) at Hotel Regina in Mürren, Switzerland.
-            </span>
-            <span class="spacer"></span>
-        </div>
-        
         <div class="scroll">
             <span class="glow-text">
                 ･*⋆｡˚☽˚｡⋆ On June 26th, 2026, Lacey & Alexander are getting married. You are warmly welcome to join us for three intimate days (June 25-27) at Hotel Regina in Mürren, Switzerland. ･゜ﾟ･*:.｡..｡.:*･*:.｡. .｡.:*･゜ﾟ･
             </span>
             <span class="spacer"></span>
         </div>
+        
     </div>
 
 </body>
