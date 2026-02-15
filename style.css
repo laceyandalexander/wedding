@@ -41,33 +41,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* 4. Hover Image Logic (The Pop-up Clock) */
-.menu-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.hover-image {
-    position: fixed;    /* Centers relative to the screen */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    width: 350px;       /* Large center display */
-    height: auto;
-    opacity: 0;
-    visibility: hidden; 
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 500;      /* Above clouds and marquee */
-}
-
-.menu-item:hover .hover-image {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-}
-
 /* 5. Clouds Background */
 .clouds-background {
     position: absolute;
