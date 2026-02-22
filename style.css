@@ -11,7 +11,7 @@ body {
     background-color: #4A90E2; 
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevents whole-page scrolling */
+    overflow: hidden; 
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -24,9 +24,11 @@ body {
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100; /* Highest layer to remain clickable */
+    z-index: 100; /* Stays on top of everything */
     display: flex;
     gap: 50px;
+    /* Adding a tiny bit of background-blur ensures text is invisible behind it */
+    padding: 10px;
 }
 
 .nav-menu a {
@@ -44,27 +46,26 @@ body {
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
-/* 4. Universal Content Box (Flush to Bottom) */
+/* 4. Universal Content Box (Flush to Bottom, Lowered Top) */
 .content-box {
     position: absolute;
-    bottom: 0;        /* Anchors box to the bottom of the viewport */
+    bottom: 0;        
     left: 50%;
     transform: translateX(-50%); 
     
     width: 90%;
     max-width: 800px;
     
-    /* Starts 160px from the top to clear the navigation menu */
-    height: calc(100vh - 160px); 
+    /* 180px clearance makes it sit lower than before */
+    height: calc(100vh - 180px); 
     
-    z-index: 10;
+    z-index: 10; /* Sits below the nav-menu (z-index 100) */
     text-align: center;
     overflow-y: auto;
     
-    /* padding-top gives breathing room for the first line of text */
-    padding: 40px 20px 60px 20px;
+    /* Internal padding to keep content centered within the box */
+    padding: 20px 20px 80px 20px;
     
-    /* Hide scrollbars for a clean look */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -73,7 +74,7 @@ body {
     display: none; 
 }
 
-/* Styles for elements placed INSIDE any content-box */
+/* Elements inside the content box */
 .content-box h1 {
     color: #fff;
     font-family: 'Flemish Script Regular', cursive;
@@ -150,7 +151,6 @@ body {
 .c1 { background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png'); width: 400px; height: 250px; }
 .c2 { background-image: url('https://pngimg.com/d/cloud_PNG112234.png'); width: 500px; height: 300px; }
 
-/* Cloud Speed and Entry Logic */
 .pos1 { top: 5%;  animation-duration: 45s; animation-delay: -5s; }
 .pos2 { top: 20%; animation-duration: 60s; animation-delay: -25s; }
 .pos3 { top: 40%; animation-duration: 40s; animation-delay: -12s; }
@@ -165,16 +165,8 @@ body {
 
 /* 7. Mobile Adjustments */
 @media (max-width: 600px) {
-    .nav-menu { 
-        top: 20px; 
-        flex-direction: column; 
-        gap: 5px; 
-    }
+    .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
     .nav-menu a, .content-box h1 { font-size: 26px; }
-    
-    /* Subtract more on mobile as the stacked menu is taller */
-    .content-box { 
-        height: calc(100vh - 200px); 
-    }
+    .content-box { height: calc(100vh - 220px); }
     .content-box p { font-size: 20px; }
 }
