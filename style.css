@@ -116,10 +116,11 @@ body {
     white-space: nowrap;
     font-size: 80px;  
     color: rgba(255, 255, 255, 0.3); 
-    text-shadow: 0 0 10px #ffb6c1;
+    text-shadow: 0 0 2px #ffb6c1;
     letter-spacing: 5px;
     font-style: italic;
     font-weight: bold;
+    letter-spacing: -2px;
     margin: 0;
     font-family: 'Flemish Script Regular', cursive;
 }
