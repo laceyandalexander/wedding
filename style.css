@@ -1,7 +1,14 @@
-/* 1. Custom Font */
+/* 1. Custom Fonts */
 @font-face {
     font-family: 'Flemish Script Regular';
     src: url('Flemish Script Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Alpina Standard';
+    src: url('GT-Alpina-Standard-Regular-Trial.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +22,8 @@ body {
     height: 100vh;
     width: 100vw;
     position: relative;
-    font-family: "SchoolBook", Times, serif;
+    /* Updated to GT Alpina */
+    font-family: 'GT Alpina Standard', serif;
 }
 
 /* 3. Navigation Menu */
@@ -54,7 +62,6 @@ body {
     width: 90%;
     max-width: 800px;    
     
-    /* Cutoff point sits well below nav links */
     margin-top: 240px; 
     height: calc(100vh - 240px); 
     
@@ -82,6 +89,8 @@ body {
 
 .content-box p {
     color: #ffffff;
+    /* Updated to GT Alpina */
+    font-family: 'GT Alpina Standard', serif;
     font-size: 28px;
     line-height: 1.5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
@@ -99,7 +108,6 @@ body {
 
 .content-box p a:hover {
     color: #fff;
-    /* Matches Nav Bar hover glow */
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
@@ -128,7 +136,7 @@ body {
     font-size: 80px;  
     color: rgba(255, 255, 255, 0.3); 
     text-shadow: 0 0 2px #ffb6c1;
-    letter-spacing: -2px; /* Tightened kerning */
+    letter-spacing: -2px; 
     font-style: italic;
     margin: 0;
     font-family: 'Flemish Script Regular', cursive;
@@ -184,5 +192,8 @@ body {
         margin-top: 300px; 
         height: calc(100vh - 300px); 
     }
-    .content-box p { font-size: 20px; }
+    .content-box p { 
+        font-family: 'GT Alpina Standard', serif;
+        font-size: 20px; 
+    }
 }
