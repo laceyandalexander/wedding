@@ -1,3 +1,5 @@
+
+
 /* 1. Custom Fonts */
 
 /* Flemish Script */
@@ -206,4 +208,18 @@ body {
         font-family: 'GT Alpina Standard', serif;
         font-size: 20px; 
     }
+body {
+    /* ... other styles ... */
+    font-family: 'GT Alpina Standard', serif;
+}
+
+.content-box p {
+    /* ... other styles ... */
+    font-family: 'GT Alpina Standard', serif;
+}
+
+/* This ensures <i> and <em> use the Thin Italic file */
+.content-box p i, .content-box p em {
+    font-family: 'GT Alpina Standard', serif;
+    font-style: italic;
 }
