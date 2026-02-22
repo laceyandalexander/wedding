@@ -46,6 +46,15 @@ body {
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
+.h1 {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Flemish Script Regular', cursive;
+    font-size: 42px; 
+    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
+    margin: 0;
+}
+
 /* 4. Agenda Page Body Text Styles (p) */
 .content-box {
     position: relative;
