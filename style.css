@@ -59,7 +59,7 @@ body {
     /* 180px clearance makes it sit lower than before */
     height: calc(100vh - 180px); 
     
-    z-index: 10; /* Sits below the nav-menu (z-index 100) */
+    z-index: 30; /* Sits below the nav-menu (z-index 100) */
     text-align: center;
     overflow-y: auto;
     
