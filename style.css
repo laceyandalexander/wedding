@@ -11,22 +11,24 @@ body {
     background-color: #4A90E2; 
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Keeps the clouds/body from scrolling, only the box */
+    overflow: hidden; 
     height: 100vh;
+    width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;     
     position: relative;
     font-family: "Times New Roman", Times, serif;
 }
 
-/* 3. Navigation Menu */
+/* 3. Navigation Menu (Layer 100) */
 .nav-menu {
     position: fixed;
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100; /* Higher than content-box */
+    z-index: 100; 
     display: flex;
     gap: 50px;
 }
@@ -46,44 +48,73 @@ body {
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
-/* 4. H1 Styles (Removed the dot so it targets the tag) */
+/* 4. Content Styles (Layer 10) */
 h1 {
     color: #fff;
-    text-decoration: none;
     font-family: 'Flemish Script Regular', cursive;
     font-size: 64px; 
     text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     font-weight: normal;
-    text-align: center;
 }
 
-/* 5. Centered & Scrollable Content Box */
 .content-box {
     position: relative;
-    z-index: 10; /* Above clouds, below Nav */
+    z-index: 10;
     text-align: center;
     max-width: 800px;
     width: 90%;
-    max-height: 70vh; /* Limits height so it doesn't hit the nav/marquee */
-    overflow-y: auto; /* Makes the box scrollable */
+    max-height: 60vh; 
+    overflow-y: auto;
     padding: 20px;
-    margin-top: 60px; /* Pushes it down so it doesn't overlap Nav */
-    
-    /* Optional: Hide scrollbar for a cleaner look while keeping scroll functionality */
     scrollbar-width: none; /* Firefox */
 }
-.content-box::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+.content-box::-webkit-scrollbar { display: none; } /* Safari/Chrome */
 
 .content-box p {
     color: #ffffff;
     font-size: 32px;
     line-height: 1.5;
-    margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-/* 6. Faster Clouds Background */
+/* 5. Marquee (Layer 10) - Fixed to bottom */
+.marquee {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+}
+
+.scroll {
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    animation: scroll-left 40s linear infinite;
+}
+
+.glow-text, .marquee h2 {
+    white-space: nowrap;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.spacer { padding: 0 100px; }
+
+/* 6. Clouds Background (Layer 1) */
 .clouds-background {
     position: absolute;
     top: 0;
@@ -99,25 +130,28 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.5;
-    animation: float linear infinite;
-    left: -600px;
+    animation: float-fast linear infinite;
+    left: -600px; /* Start off-screen */
 }
 
-/* Reduced durations for faster entry/movement */
-.pos1 { top: 5%;  animation-duration: 25s; } 
-.pos2 { top: 25%; animation-duration: 35s; }
-.pos3 { top: 45%; animation-duration: 20s; }
-.pos4 { top: 65%; animation-duration: 30s; }
+.c1 { background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png'); width: 400px; height: 250px; }
+.c2 { background-image: url('https://pngimg.com/d/cloud_PNG112234.png'); width: 500px; height: 300px; }
 
-@keyframes float {
-    from { transform: translateX(-100px); }
-    to { transform: translateX(calc(100vw + 600px)); }
+/* Faster Cloud Entry */
+.pos1 { top: 5%;  animation-duration: 20s; }
+.pos2 { top: 25%; animation-duration: 28s; }
+.pos3 { top: 45%; animation-duration: 18s; }
+.pos4 { top: 65%; animation-duration: 25s; }
+
+@keyframes float-fast {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(100vw + 800px)); }
 }
 
 /* 7. Mobile Adjustments */
 @media (max-width: 600px) {
     .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
-    .nav-menu a { font-size: 28px; }
-    h1 { font-size: 48px; }
-    .content-box p { font-size: 22px; }
+    .nav-menu a { font-size: 26px; }
+    h1 { font-size: 40px; }
+    .content-box p { font-size: 20px; }
 }
