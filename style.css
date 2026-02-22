@@ -25,16 +25,15 @@
     font-weight: normal;
     font-style: italic; /* This links this file to the <i> tag */
 }
-/* 2. Base Page Styles */
-body {
+/* 2. Base Page Styles - Updated to prevent horizontal scroll */
+html, body {
     background-color: #4A90E2; 
     margin: 0;
     padding: 0;
-    overflow: hidden; 
+    width: 100%;
     height: 100vh;
-    width: 100vw;
+    overflow-x: hidden; /* This is the primary fix for sideways scrolling */
     position: relative;
-    /* Updated to GT Alpina */
     font-family: 'GT Alpina Standard', serif;
 }
 
@@ -196,36 +195,40 @@ body {
     to { transform: translateX(calc(100vw + 600px)); }
 }
 
-/* 7. Mobile Adjustments */
+/* 7. Mobile Adjustments - Side-by-side Nav & Scroll Fix */
 @media (max-width: 600px) {
+    /* Lock the viewport */
+    body {
+        position: fixed; 
+        touch-action: pan-y; /* Allows vertical scrolling but blocks horizontal "tugging" */
+    }
+
     .nav-menu { 
         top: 20px; 
-        flex-direction: row; /* Forces links to stay side-by-side */
-        gap: 15px;           /* Reduced gap so they fit on one line */
-        width: 100%;         /* Ensures the menu has room to spread */
-        justify-content: center; 
+        flex-direction: row; /* Keep side-by-side */
+        gap: 12px;           /* Tightened for small screens */
+        width: 100%;
+        justify-content: center;
+        padding: 5px;
     }
 
     .nav-menu a { 
-        font-size: 22px;     /* Smaller font for mobile fit */
-    }
-
-    .content-box h1 { 
-        font-size: 26px; 
+        font-size: 20px;     /* Scaled down to fit across a phone */
+        white-space: nowrap; /* Prevents words from breaking */
     }
 
     .content-box { 
-        margin-top: 180px;   /* Adjusted since the menu is now shorter (one line) */
-        height: calc(100vh - 180px); 
+        width: 85%;          /* Slightly narrower to ensure it doesn't touch screen edges */
+        margin-top: 160px;   
+        height: calc(100vh - 160px); 
     }
 
     .content-box p { 
-        font-family: 'GT Alpina Standard', serif;
-        font-size: 18px;     /* Slightly smaller text for better mobile reading */
+        font-size: 18px; 
     }
 
     .marquee h2 {
-        font-size: 40px;     /* Shrink the background marquee so it doesn't overwhelm */
+        font-size: 35px;     /* Smaller background text to prevent overflow issues */
     }
 }
 
