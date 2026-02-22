@@ -198,30 +198,35 @@ body {
 
 /* 7. Mobile Adjustments */
 @media (max-width: 600px) {
-    .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
-    .nav-menu a, .content-box h1 { font-size: 26px; }
-    .content-box { 
-        margin-top: 300px; 
-        height: calc(100vh - 300px); 
+    .nav-menu { 
+        top: 20px; 
+        flex-direction: row; /* Forces links to stay side-by-side */
+        gap: 15px;           /* Reduced gap so they fit on one line */
+        width: 100%;         /* Ensures the menu has room to spread */
+        justify-content: center; 
     }
+
+    .nav-menu a { 
+        font-size: 22px;     /* Smaller font for mobile fit */
+    }
+
+    .content-box h1 { 
+        font-size: 26px; 
+    }
+
+    .content-box { 
+        margin-top: 180px;   /* Adjusted since the menu is now shorter (one line) */
+        height: calc(100vh - 180px); 
+    }
+
     .content-box p { 
         font-family: 'GT Alpina Standard', serif;
-        font-size: 20px; 
+        font-size: 18px;     /* Slightly smaller text for better mobile reading */
     }
-body {
-    /* ... other styles ... */
-    font-family: 'GT Alpina Standard', serif;
-}
 
-.content-box p {
-    /* ... other styles ... */
-    font-family: 'GT Alpina Standard', serif;
-}
-
-/* This ensures <i> and <em> use the Thin Italic file */
-.content-box p i, .content-box p em {
-    font-family: 'GT Alpina Standard', serif;
-    font-style: italic;
+    .marquee h2 {
+        font-size: 40px;     /* Shrink the background marquee so it doesn't overwhelm */
+    }
 }
 
 /* Styling for images inside the content box */
