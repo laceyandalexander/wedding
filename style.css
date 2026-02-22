@@ -1,4 +1,6 @@
 /* 1. Custom Fonts */
+
+/* Flemish Script */
 @font-face {
     font-family: 'Flemish Script Regular';
     src: url('Flemish Script Regular.woff') format('woff');
@@ -6,6 +8,7 @@
     font-style: normal;
 }
 
+/* GT Alpina - Regular Style */
 @font-face {
     font-family: 'GT Alpina Standard';
     src: url('GT-Alpina-Standard-Regular-Trial.otf') format('opentype');
@@ -13,6 +16,13 @@
     font-style: normal;
 }
 
+/* GT Alpina - Italic Style */
+@font-face {
+    font-family: 'GT Alpina Standard';
+    src: url('GT-Alpina-Standard-Thin-Italic-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: italic; /* This links this file to the <i> tag */
+}
 /* 2. Base Page Styles */
 body {
     background-color: #4A90E2; 
