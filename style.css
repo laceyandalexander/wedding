@@ -11,7 +11,7 @@ body {
     background-color: #4A90E2; 
     margin: 0;
     padding: 0;
-    overflow: hidden; 
+    overflow: hidden; /* Keeps the clouds/body from scrolling, only the box */
     height: 100vh;
     display: flex;
     justify-content: center; 
@@ -20,13 +20,13 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 
-/* 3. Navigation Menu & Hover Effect */
+/* 3. Navigation Menu */
 .nav-menu {
     position: fixed;
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10; 
+    z-index: 100; /* Higher than content-box */
     display: flex;
     gap: 50px;
 }
@@ -46,68 +46,44 @@ body {
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
-.h1 {
+/* 4. H1 Styles (Removed the dot so it targets the tag) */
+h1 {
     color: #fff;
     text-decoration: none;
     font-family: 'Flemish Script Regular', cursive;
-    font-size: 42px; 
+    font-size: 64px; 
     text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
-    margin: 0;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    text-align: center;
 }
 
-/* 4. Agenda Page Body Text Styles (p) */
+/* 5. Centered & Scrollable Content Box */
 .content-box {
     position: relative;
-    z-index: 5;
+    z-index: 10; /* Above clouds, below Nav */
     text-align: center;
-    max-width: 900px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 70vh; /* Limits height so it doesn't hit the nav/marquee */
+    overflow-y: auto; /* Makes the box scrollable */
     padding: 20px;
+    margin-top: 60px; /* Pushes it down so it doesn't overlap Nav */
+    
+    /* Optional: Hide scrollbar for a cleaner look while keeping scroll functionality */
+    scrollbar-width: none; /* Firefox */
 }
+.content-box::-webkit-scrollbar { display: none; } /* Chrome/Safari */
 
 .content-box p {
+    color: #ffffff;
     font-size: 32px;
-    color: #fff;
-    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
-    letter-spacing: 2px;
+    line-height: 1.5;
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-/* 5. Index Page Marquee Styles (Using your specific settings) */
-.marquee {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-}
-
-.scroll {
-    display: flex;
-    flex-shrink: 0;
-    min-width: 100%;
-    animation: scroll-left 40s linear infinite;
-}
-
-/* Applying your marquee style settings to the h2 */
-.marquee h2 {
-    white-space: nowrap;
-    font-size: 32px;
-    color: #fff;
-    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
-    letter-spacing: 2px;
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
-}
-
-@keyframes scroll-left {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-}
-
-.spacer { padding: 0 100px; }
-
-/* 6. Clouds Background */
+/* 6. Faster Clouds Background */
 .clouds-background {
     position: absolute;
     top: 0;
@@ -127,13 +103,11 @@ body {
     left: -600px;
 }
 
-.c1 { background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png'); width: 400px; height: 250px; }
-.c2 { background-image: url('https://pngimg.com/d/cloud_PNG112234.png'); width: 500px; height: 300px; }
-
-.pos1 { top: 5%;  animation-duration: 45s; }
-.pos2 { top: 25%; animation-duration: 65s; }
-.pos3 { top: 45%; animation-duration: 40s; }
-.pos4 { top: 65%; animation-duration: 55s; }
+/* Reduced durations for faster entry/movement */
+.pos1 { top: 5%;  animation-duration: 25s; } 
+.pos2 { top: 25%; animation-duration: 35s; }
+.pos3 { top: 45%; animation-duration: 20s; }
+.pos4 { top: 65%; animation-duration: 30s; }
 
 @keyframes float {
     from { transform: translateX(-100px); }
@@ -144,6 +118,6 @@ body {
 @media (max-width: 600px) {
     .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
     .nav-menu a { font-size: 28px; }
-    .content-box p { font-size: 24px; }
-    .marquee h2 { font-size: 22px; }
+    h1 { font-size: 48px; }
+    .content-box p { font-size: 22px; }
 }
