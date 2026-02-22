@@ -38,7 +38,16 @@ body {
     font-family: 'Flemish Script Regular', cursive;
     font-size: 42px; 
     text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
-    transition: transform 0.3s ease;
+    /* Transition handles the 'animation' feel */
+    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Required for transform to work effectively */
+}
+
+/* The Hover Effect */
+.nav-menu a:hover {
+    transform: scale(1.15); /* Increases size by 15% */
+    text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4, 0 0 30px #ffffff; /* Intensifies the glow */
+    color: #fff0f5; /* Slight color shift to lavender blush */
 }
 
 /* 5. Clouds Background */
