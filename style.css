@@ -17,9 +17,10 @@ body {
     justify-content: center; 
     align-items: center;     
     position: relative;
+    font-family: "Times New Roman", Times, serif;
 }
 
-/* 3. Navigation Menu (with Hover Effect) */
+/* 3. Navigation Menu & Hover Effect */
 .nav-menu {
     position: fixed;
     top: 40px;
@@ -45,7 +46,7 @@ body {
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
-/* 4. Main Body Text Styles */
+/* 4. Agenda Page Body Text (p) */
 .content-box {
     position: relative;
     z-index: 5;
@@ -55,16 +56,48 @@ body {
 }
 
 .content-box p {
-    font-family: "Times New Roman", Times, serif;
-    color: #ffffff; /* White text */
-    font-size: 32px; /* Increased size */
+    color: #ffffff;
+    font-size: 32px;
     line-height: 1.4;
     margin: 0;
-    /* Soft shadow to help text pop against light clouds */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-/* 5. Clouds Background */
+/* 5. Index Page Marquee Styles (h2) */
+.marquee {
+    position: fixed;
+    bottom: 50px; 
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scroll {
+    display: flex;
+    animation: scroll-left 35s linear infinite;
+}
+
+.marquee h2 {
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.spacer { padding: 0 80px; }
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* 6. Clouds Background */
 .clouds-background {
     position: absolute;
     top: 0;
@@ -79,7 +112,7 @@ body {
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.5; /* Slightly lowered opacity for better text contrast */
+    opacity: 0.5;
     animation: float linear infinite;
     left: -600px;
 }
@@ -87,28 +120,20 @@ body {
 .c1 { background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png'); width: 400px; height: 250px; }
 .c2 { background-image: url('https://pngimg.com/d/cloud_PNG112234.png'); width: 500px; height: 300px; }
 
-.pos1 { top: 5%;  animation-duration: 45s; animation-delay: -5s; }
-.pos2 { top: 20%; animation-duration: 60s; animation-delay: -25s; }
-.pos3 { top: 40%; animation-duration: 40s; animation-delay: -12s; }
-.pos4 { top: 60%; animation-duration: 55s; animation-delay: -30s; }
-.pos5 { top: 80%; animation-duration: 50s; animation-delay: -18s; }
+.pos1 { top: 5%;  animation-duration: 45s; }
+.pos2 { top: 25%; animation-duration: 65s; }
+.pos3 { top: 45%; animation-duration: 40s; }
+.pos4 { top: 65%; animation-duration: 55s; }
 
 @keyframes float {
     from { transform: translateX(-100px); }
     to { transform: translateX(calc(100vw + 600px)); }
 }
 
-/* 6. Mobile Fixes */
+/* 7. Mobile Adjustments */
 @media (max-width: 600px) {
-    .nav-menu {
-        top: 20px;
-        flex-direction: column; 
-        gap: 5px;
-        align-items: center;
-    }
+    .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
     .nav-menu a { font-size: 28px; }
-    .content-box p { 
-        font-size: 22px; 
-        padding: 0 10px;
-    }
+    .content-box p { font-size: 22px; }
+    .marquee h2 { font-size: 20px; }
 }
