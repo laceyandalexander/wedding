@@ -56,8 +56,8 @@ body {
     width: 90%;
     max-width: 800px;
     
-    /* 180px clearance makes it sit lower than before */
-    height: calc(100vh - 180px); 
+/* Increased subtraction to 220px to move the top edge even lower */
+    height: calc(100vh - 220px);
     
     z-index: 30; /* Sits below the nav-menu (z-index 100) */
     text-align: center;
