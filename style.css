@@ -223,3 +223,13 @@ body {
     font-family: 'GT Alpina Standard', serif;
     font-style: italic;
 }
+
+/* Styling for images inside the content box */
+.content-box img {
+    display: block;          /* Keeps it on its own line */
+    max-width: 100%;         /* Ensures it never overflows the 800px box */
+    height: auto;            /* Maintains the correct proportions */
+    margin: 40px auto;       /* Centers the image with space above and below */
+    border-radius: 5px;      /* Optional: slightly rounds the corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: adds depth against the blue */
+}
