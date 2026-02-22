@@ -18,16 +18,15 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 
-/* 3. Navigation Menu (Fixed at top) */
+/* 3. Navigation Menu */
 .nav-menu {
     position: fixed;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100; /* Stays on top of everything */
+    z-index: 100; /* Stays above the content box */
     display: flex;
     gap: 50px;
-    /* Adding a tiny bit of background-blur ensures text is invisible behind it */
     padding: 10px;
 }
 
@@ -46,21 +45,26 @@ body {
     text-shadow: 0 0 10px #ffb6c1, 0 0 25px #ff69b4, 0 0 35px #ffffff;
 }
 
-/* 4. Universal Content Box (Flush to Bottom, Lowered Top) */
+/* 4. Universal Content Box */
 .content-box {
     position: absolute;
     bottom: 0;   
-    top: 0;
     left: 50%;
     transform: translateX(-50%); 
     width: 90%;
     max-width: 800px;    
-    z-index: 30; /* Sits below the nav-menu (z-index 100) */
+    
+    /* This creates the cutoff point below the nav links */
+    /* Increased to 240px to ensure a clean gap below the Flemish script descenders */
+    margin-top: 240px; 
+    height: calc(100vh - 240px); 
+    
+    z-index: 30; 
     text-align: center;
     overflow-y: auto;
     
-    /* Internal padding to keep content centered within the box */
-    padding: 20px 20px 80px 20px;
+    /* Internal padding for text flow */
+    padding: 10px 20px 80px 20px;
     
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -88,17 +92,17 @@ body {
     margin-bottom: 25px;
 }
 
-/* 5. Marquee Styles (Centered on Screen) */
+/* 5. Marquee Styles */
 .marquee {
     position: fixed;
-    top: 50%;         /* Move to vertical center */
+    top: 50%;         
     left: 0;
     width: 100%;
-    transform: translateY(-50%); /* Offset by its own height to be perfectly centered */
-    z-index: 5;       /* Sits behind the content-box but above clouds */
+    transform: translateY(-50%); 
+    z-index: 5;       
     overflow: hidden;
     display: flex;
-    pointer-events: none; /* Allows you to click the content-box "through" the marquee if they overlap */
+    pointer-events: none; 
 }
 
 .scroll {
@@ -110,14 +114,14 @@ body {
 
 .marquee h2 {
     white-space: nowrap;
-    font-size: 80px;  /* Increased size since it's now a central hero element */
-    color: rgba(255, 255, 255, 0.3); /* Made it semi-transparent so it doesn't clash with your main text */
+    font-size: 80px;  
+    color: rgba(255, 255, 255, 0.3); 
     text-shadow: 0 0 10px #ffb6c1;
     letter-spacing: 5px;
     font-style: italic;
     font-weight: bold;
     margin: 0;
-    font-family: 'Flemish Script Regular', cursive; /* Optional: use your wedding font for the marquee too */
+    font-family: 'Flemish Script Regular', cursive;
 }
 
 @keyframes scroll-left {
@@ -166,6 +170,9 @@ body {
 @media (max-width: 600px) {
     .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
     .nav-menu a, .content-box h1 { font-size: 26px; }
-    .content-box { height: calc(100vh - 220px); }
+    .content-box { 
+        margin-top: 300px; 
+        height: calc(100vh - 300px); 
+    }
     .content-box p { font-size: 20px; }
 }
