@@ -56,11 +56,12 @@ body {
 }
 
 .content-box p {
-    color: #ffffff;
-    font-size: 36px; /* Slightly larger as requested */
-    line-height: 1.4;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
+    letter-spacing: 2px;
+    font-weight: bold;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 /* 5. Index Page Marquee Styles (Using your specific settings) */
