@@ -16,7 +16,8 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    /* Changed to flex-start so content starts below nav and grows to bottom */
+    justify-content: flex-start; 
     align-items: center;     
     position: relative;
     font-family: "Times New Roman", Times, serif;
@@ -54,15 +55,15 @@ h1 {
     font-family: 'Flemish Script Regular', cursive;
     font-size: 42px; 
     text-shadow: 0 0 5px #ffb6c1, 0 0 12px #ff69b4;
-    margin: 0 0 10px 0;
+    /* Pushes h1 down past the fixed nav */
+    margin: 140px 0 10px 0; 
     font-weight: normal;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .content-box {
-    /* Position below the fixed nav menu */
-    margin: 160px auto 40px; 
-    
     /* Layout and Centering */
     position: relative;
     z-index: 10;
@@ -70,10 +71,15 @@ h1 {
     max-width: 800px;
     width: 90%;
     
-    /* Scrolling functionality */
-    max-height: 65vh; 
-    overflow-y: auto;
+    /* Forces the box to extend to the bottom edge */
+    flex-grow: 1;
+    margin: 0; 
     padding: 20px;
+    
+    /* Scrolling functionality */
+    overflow-y: auto;
+    /* Ensures it doesn't push off screen but touches the bottom */
+    max-height: calc(100vh - 200px); 
     
     /* Hide scrollbars */
     scrollbar-width: none; /* Firefox */
@@ -87,7 +93,7 @@ h1 {
 
 .content-box p {
     color: #ffffff;
-    font-family: "Times New Roman", serif; /* Or Flemish Script if you prefer */
+    font-family: "Times New Roman", serif;
     font-size: 32px;
     line-height: 1.5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
@@ -161,7 +167,6 @@ h1 {
     height: 300px; 
 }
 
-/* Positions and Speeds with delays for instant-on effect */
 .pos1 { top: 5%;  animation-duration: 45s; animation-delay: -5s; }
 .pos2 { top: 20%; animation-duration: 60s; animation-delay: -25s; }
 .pos3 { top: 40%; animation-duration: 40s; animation-delay: -12s; }
@@ -178,6 +183,7 @@ h1 {
 @media (max-width: 600px) {
     .nav-menu { top: 20px; flex-direction: column; gap: 5px; }
     .nav-menu a { font-size: 26px; }
-    h1 { font-size: 40px; }
+    h1 { font-size: 32px; margin-top: 120px; }
     .content-box p { font-size: 20px; }
+    .content-box { max-height: calc(100vh - 160px); }
 }
