@@ -151,19 +151,14 @@ html, body {
 
 .marquee h2 {
     white-space: nowrap;
-    font-size: 42px;  
-    color: #ffffff; /* Plain white, opacity removed */
-    letter-spacing: -2px; 
+    font-size: 80px; /* Kept large for the background, but style is now identical */
+    color: #ffffff; 
+    font-weight: normal; /* Removes the "bold" look */
+    letter-spacing: normal; /* Returns to the natural elegant spacing */
     margin: 0;
     font-family: 'Flemish Script Regular', cursive;
+    text-shadow: none;
 }
-
-@keyframes scroll-left {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-}
-
-.spacer { padding: 0 100px; }
 
 /* 6. Cloud Animation Effect */
 .clouds-background {
