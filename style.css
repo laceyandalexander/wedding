@@ -129,6 +129,10 @@ html, body {
     opacity: 0.6; 
 }
 
+Understood. I have updated the CSS to ensure the marquee uses the exact same styling as your navigation menu (normal weight, no shadows, no tight spacing) while keeping the continuous horizontal scroll active.
+
+Updated Marquee CSS (Section 5)
+CSS
 /* 5. Marquee Styles */
 .marquee {
     position: fixed;
@@ -146,18 +150,30 @@ html, body {
     display: flex;
     flex-shrink: 0;
     min-width: 100%;
-    animation: scroll-left 40s linear infinite;
+    /* Keep the movement active */
+    animation: scroll-left 40s linear infinite; 
 }
 
 .marquee h2 {
     white-space: nowrap;
-    font-size: 80px; /* Kept large for the background, but style is now identical */
-    color: #ffffff; 
-    font-weight: normal; /* Removes the "bold" look */
-    letter-spacing: normal; /* Returns to the natural elegant spacing */
-    margin: 0;
+    /* Large size for background impact, but matching nav style */
+    font-size: 80px;  
+    color: #ffffff;
+    /* Matches .nav-menu a exactly */
     font-family: 'Flemish Script Regular', cursive;
+    font-weight: normal; 
+    letter-spacing: normal; 
     text-shadow: none;
+    margin: 0;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.spacer { 
+    padding: 0 100px; 
 }
 
 /* 6. Cloud Animation Effect */
