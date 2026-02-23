@@ -26,7 +26,7 @@
 
 /* 2. Base Page Styles */
 html, body {
-    background-color: #6d9bb3; /* Updated Blue */
+    background-color: #6d9bb3; 
     margin: 0;
     padding: 0;
     width: 100%;
@@ -34,7 +34,7 @@ html, body {
     overflow-x: hidden;
     position: relative;
     font-family: 'Self Modern', serif;
-    color: #ffffff; /* All text white */
+    color: #ffffff; 
 }
 
 /* 3. Navigation Menu */
@@ -56,11 +56,10 @@ html, body {
     font-size: 42px; 
     display: inline-block;
     transition: transform 0.4s ease;
-    text-shadow: none; /* Glow removed */
 }
 
 .nav-menu a:hover {
-    transform: scale(1.15); /* Enlarge effect kept */
+    transform: scale(1.15); 
 }
 
 /* 4. Universal Content Box */
@@ -91,7 +90,6 @@ html, body {
     font-size: 42px; 
     margin: 0 0 30px 0;
     font-weight: normal;
-    text-shadow: none; /* Glow removed */
 }
 
 .content-box p {
@@ -100,7 +98,6 @@ html, body {
     font-size: 28px;
     line-height: 1.5;
     margin-bottom: 25px;
-    text-shadow: none; /* Shadow removed */
 }
 
 /* Link styling inside paragraphs */
@@ -113,8 +110,7 @@ html, body {
 }
 
 .content-box p a:hover {
-    opacity: 0.6; /* Replaced glow with lower opacity */
-    text-shadow: none;
+    opacity: 0.6; 
 }
 
 /* 5. Marquee Styles */
@@ -140,12 +136,11 @@ html, body {
 .marquee h2 {
     white-space: nowrap;
     font-size: 80px;  
-    color: rgba(255, 255, 255, 0.2); /* Lowered opacity */
+    color: #ffffff; /* Plain white, opacity removed */
     letter-spacing: -2px; 
     font-style: italic;
     margin: 0;
     font-family: 'Flemish Script Regular', cursive;
-    text-shadow: none; /* Glow removed */
 }
 
 @keyframes scroll-left {
@@ -155,7 +150,7 @@ html, body {
 
 .spacer { padding: 0 100px; }
 
-/* 6. Cloud Animation Effect - Updated for size and position */
+/* 6. Cloud Animation Effect */
 .clouds-background {
     position: absolute;
     top: 0;
@@ -170,16 +165,14 @@ html, body {
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.3; /* Lowered opacity */
+    opacity: 0.3; /* Opacity kept for clouds only */
     animation: float linear infinite;
     left: -800px;
 }
 
-/* Larger Cloud Sizes */
 .c1 { background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG112234.png'); width: 800px; height: 500px; }
 .c2 { background-image: url('https://pngimg.com/d/cloud_PNG112234.png'); width: 900px; height: 600px; }
 
-/* Positions shifted lower down the screen */
 .pos1 { top: 40%; animation-duration: 55s; animation-delay: -5s; }
 .pos2 { top: 50%; animation-duration: 70s; animation-delay: -25s; }
 .pos3 { top: 65%; animation-duration: 50s; animation-delay: -12s; }
@@ -226,13 +219,11 @@ html, body {
     }
 }
 
-/* Image styling inside content box */
 .content-box img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 40px auto;
     border-radius: 5px;
-    /* Removed heavy box shadow for a cleaner look */
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
