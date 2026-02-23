@@ -63,7 +63,7 @@ html, body {
     transform: scale(1.15); 
 }
 
-/* 4. Universal Content Box - The only scrollable element */
+/* 4. Universal Content Box - With Blur/Fade Effect */
 .content-box {
     position: absolute;
     bottom: 0;   
@@ -72,27 +72,32 @@ html, body {
     width: 90%;
     max-width: 800px;    
     
-    /* This defines the scrollable area height */
     margin-top: 240px; 
     height: calc(100vh - 240px); 
     
     z-index: 30; 
     text-align: center;
+    overflow-y: auto;
     
-    /* Ensures scrolling stays internal to this box */
-    overflow-y: auto; 
-    overflow-x: hidden;
-    
-    padding: 10px 20px 80px 20px;
-    
-    /* Optional: hides scrollbar for a cleaner look */
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
-}
+    /* Increased top padding so text starts below the fade area */
+    padding: 60px 20px 80px 20px; 
 
-/* Chrome/Safari fix for hiding the scrollbar */
-.content-box::-webkit-scrollbar { 
-    display: none; 
+    /* The Fade Effect */
+    -webkit-mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 15%, 
+        black 90%, 
+        transparent 100%
+    );
+    mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 15%, 
+        black 90%, 
+        transparent 100%
+    );
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .content-box h1 {
