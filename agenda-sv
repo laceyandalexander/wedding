@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>˚｡⋆ Agenda ⋆｡˚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav class="nav-menu">
+    <div class="menu-item">
+        <a href="agenda-sv.html">Agenda</a>
+    </div>
+    <a href="resa.html">Travelling</a>
+    <a href="info-sv.html">More Info</a>
+</nav>
+
+<div class="content-box">
+  <h1>  Torsdag, 25:e juni </h1>
+    <p>
+15.00 – Tidigast möjliga check-in på Hotel Regina <br>
+16.00 – Välkomstdrink i Salongen <br>
+17.00 – Aktiviteter <br>
+18.00 – Middag på Restaurant Stägerstübli <br>
+        </p>
+    <p>
+  <h1>  Fredag, 26:e juni </h1>
+    <p>
+ 09.00 – Frukost <br>    
+ 15.30 – Välkomstdrink på terassen <br>
+ 16:00 – Gemensam promenad till ceremonin <br>
+ 16:30 – Vigselceremoni <br> 
+ 17:30 – Middag på Hotel Regina <br> 
+ ??:?? – Efterfest <br>      
+    </p>
+  <h1>  Lördag, 27: juni </h1>
+    <p>
+ 09.00 – Frukost <br>    
+ 11.00 – Check-out <br>
+ 11.30 – Farväl <br>     
+</p>
+</div>
+
+<div class="clouds-background">
+    <div class="cloud c1 pos1"></div>
+    <div class="cloud c2 pos2"></div>
+    <div class="cloud c1 pos3"></div>
+    <div class="cloud c2 pos4"></div>
+    <div class="cloud c1 pos5"></div>
+</div>
+
+</body>
+</html>
