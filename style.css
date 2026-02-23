@@ -24,14 +24,15 @@
     font-style: italic;
 }
 
-/* 2. Base Page Styles */
+/* 2. Base Page Styles - Locked to prevent page-wide scrolling */
 html, body {
     background-color: #6d9bb3; 
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    /* This prevents the background/marquee from scrolling */
+    overflow: hidden; 
     position: relative;
     font-family: 'Self Modern', serif;
     color: #ffffff; 
@@ -62,7 +63,7 @@ html, body {
     transform: scale(1.15); 
 }
 
-/* 4. Universal Content Box */
+/* 4. Universal Content Box - The only scrollable element */
 .content-box {
     position: absolute;
     bottom: 0;   
@@ -70,16 +71,26 @@ html, body {
     transform: translateX(-50%); 
     width: 90%;
     max-width: 800px;    
+    
+    /* This defines the scrollable area height */
     margin-top: 240px; 
     height: calc(100vh - 240px); 
+    
     z-index: 30; 
     text-align: center;
-    overflow-y: auto;
+    
+    /* Ensures scrolling stays internal to this box */
+    overflow-y: auto; 
+    overflow-x: hidden;
+    
     padding: 10px 20px 80px 20px;
-    scrollbar-width: none;
+    
+    /* Optional: hides scrollbar for a cleaner look */
+    scrollbar-width: none; 
     -ms-overflow-style: none;
 }
 
+/* Chrome/Safari fix for hiding the scrollbar */
 .content-box::-webkit-scrollbar { 
     display: none; 
 }
