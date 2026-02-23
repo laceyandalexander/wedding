@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>˚｡⋆ Mer Info ⋆｡˚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav class="nav-menu">
+    <div class="menu-item">
+        <a href="agenda-sv.html">Agenda</a>
+    </div>
+    <a href="resa.html">Resa</a>
+    <a href="info-sv.html">Mer Info</a>
+</nav>
+
+<div class="content-box">
+
+ <h1>  Vår historia </h1>
+ <p>
+ <img src="laceyalex3.png" alt="Lacey and Alex"><br> 
+Ni har säkert hört den förut ... men vårt stundande bröllop kräver såklart att vi berättar den igen!
+Den artonde september 2019 såg vi varandra för första gången, i en gemensam väns studio där vi båda skulle delta i ett LARP med sci-fi tema.
+Lacey fick rollen som healer, medan Alex var relationsexpert... och resten är rollspelshistoria. <br> 
+     <br> 
+Instängda tillsammans under COVID, hemligt boende i Laceys bara-för-kvinnor-kollektiv, växte vår kärlek allt större.
+Och den 18:e juli 2023, friade Alex, spontant medan de vilade i sin säng en regnig eftermiddag
+(men rubinringen hade vid det laget brunnit i hans ficka i flera månader) <br> 
+     <br> 
+Ett år in i vad som skulle bli en tre års lång förlovning, tog vi bilen ner till Schweiz för att vandra i bergen med Laceys bror Cooper.
+Vår vistelse på Hotel Regina i Mürren försäkrade oss om att vi äntligen hittat den perfekta platsen att sammanföra våra familjer på.
+<br> 
+Så nu, äntligen, sju år in i vår kärlekshistoria, kan vi äntligen bjuda in er till att fira med oss i sommar, och som vi längtar! .<br> 
+     <br> 
+  <h1>  Om din vistelse </h1>
+    <p>
+Vi är glada att kunna erbjuda er två nätter på Hotel Regina, 
+      från torsdag, 25 juni till lördag, den 27:e. <br>   
+      <i>Frukost är inkluderat.</i><br> 
+    </p>
+  <h1>  Klädkod </h1>
+    <p>
+Ha på dig någonting du känner dig fin i. <br> 
+       <i> Och glöm inte bekväma kängor att vandra i bergen med ;)</i><br>      
+    </p>
+
+  <h1>  Gåvor </h1>
+    <p>
+Vi är redan så glada och tacksamma att ni tar er hela vägen ner till Schweiz!<br> 
+    </p>
+    
+</div>
+
+<div class="clouds-background">
+    <div class="cloud c1 pos1"></div>
+    <div class="cloud c2 pos2"></div>
+    <div class="cloud c1 pos3"></div>
+    <div class="cloud c2 pos4"></div>
+    <div class="cloud c1 pos5"></div>
+</div>
+
+</body>
+</html>
