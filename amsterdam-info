@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>˚｡⋆ Info ⋆｡˚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-menu">
+    <div class="menu-item">
+        <a href="amsterdam-agenda.html">Agenda</a>
+    </div>
+    <a href="accomodation.html">Accomodation</a>
+    <a href="amsterdam-info.html">Info</a>
+</nav>
+
+<div class="content-box">
+
+ <h1>  Our Story </h1>
+ <p>
+ <img src="laceyalex3.png" alt="Lacey and Alex"><br> 
+We’re sure you've heard this one before ... but our wedding calls for a fresh reminder! 
+On September 18, 2019, we first laid our eyes on each other, at the studio of a mutual friend who was hosting a sci-fi–themed LARP. 
+Lacey ended up playing a healer, Alex a relationship expert… and the rest is role playing history.<br> 
+     <br> 
+Locked down together during COVID, secretly, in a women-only collective housing, our love only grew stronger.
+And on July 18, 2023, Alex proposed, spontaneously while they were lounging in bed on a rainy afternoon, 
+although a ruby ring had been burning a hole in his pocket for months).<br> 
+     <br> 
+Now, three years into our engagement, and seven into our love story, we are finally able to bring family and friends together for the first time. 
+When we see each other on July 30th, we will just have gotten afficiated in the court of Amsterdam (a small ceremony attended by our siblings)
+and we will continue celebrating this for the rest of the day with you. We cannot wait!   <br> 
+     <br> 
+
+  <h1>  Dresscode </h1>
+    <p>
+Wear something you feel pretty in. <br>     
+    </p>
+
+  <h1>  Registry </h1>
+    <p>
+We’re so grateful to have you celebrating with us — your presence is truly the greatest gift, and we deeply appreciate that many of you have traveled far to be here.<br>   
+<i>If you would like to contribute in another way, we would be delighted to welcome any donation towards our wedding trip to Japan this September.</i><br> 
+    </p>
+    
+</div>
+
+<div class="clouds-background">
+    <div class="cloud c1 pos1"></div>
+    <div class="cloud c2 pos2"></div>
+    <div class="cloud c1 pos3"></div>
+    <div class="cloud c2 pos4"></div>
+    <div class="cloud c1 pos5"></div>
+</div>
+
+</body>
+</html>
