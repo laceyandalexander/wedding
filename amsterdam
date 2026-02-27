@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>˚｡⋆ Lacey & Alexander ⋆｡˚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-menu">
+    <div class="menu-item">
+        <a href="agenda-sv.html">Agenda</a>
+    </div>
+    
+    <a href="resa.html">Accomodation</a>
+    <a href="info-sv.html">Info</a>
+</nav>
+
+    <div class="clouds-background">
+        <div class="cloud c1 pos1"></div>
+        <div class="cloud c2 pos2"></div>
+        <div class="cloud c1 pos3"></div>
+        <div class="cloud c2 pos4"></div>
+        <div class="cloud c1 pos5"></div>
+        <div class="cloud c2 pos6"></div>
+    </div>
+
+<div class="marquee">
+    <div class="scroll">
+        <h2>˚｡⋆ Lacey and Alexander are getting married! We would love to celebrate with you! ˚｡⋆ Tuesday, June 30th in Amsterdam ⋆｡˚⋆｡˚</h2>
+</div>
+
+        </div>
+    </div>
+
+</body>
+</html>
