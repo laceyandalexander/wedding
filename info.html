@@ -58,60 +58,6 @@ We’re so grateful to have you celebrating with us, your presence is truly the 
 <i>If you wish to celebrate with a gift, any contribution to our honeymoon in Japan this coming September would be greatly appreciated.</i><br> 
     </p>
 <br> 
-<div class="registry-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; margin-top: 40px; font-family: 'Courier New', Courier, monospace;">
-  
-  <div class="registry-item" style="border: 1px solid #000; padding: 20px; background: #fff; display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <img src="https://ls.codetech.nl/shops/299003/files/476373809/dangbei-dangbei-freedo-full-hd-resolutie-met-hdr10.jpg" alt="Dangbei Projector" style="width: 100%; height: 200px; object-fit: contain; border-bottom: 1px solid #eee; margin-bottom: 15px;">
-      <h3 style="margin: 10px 0;">Projector</h3>
-      <p style="font-size: 1.2em; font-weight: bold;">€450</p>
-    </div>
-    <button onclick="openRegistry('Projector', '€450')" style="background: #fce4ec; border: 1px solid #000; padding: 10px 20px; cursor: pointer; font-family: inherit; margin-top: 10px;">Claim Item</button>
-  </div>
-
-  <div class="registry-item" style="border: 1px solid #000; padding: 20px; background: #fff; display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-      <img src="https://www.agoda.com/wp-content/uploads/2025/08/Must-Visit-Spots-in-From-Saga-With-Love_Featured.png" alt="Japan Honeymoon" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #eee; margin-bottom: 15px;">
-      <h3 style="margin: 10px 0;">Japan Honeymoon</h3>
-      <p style="font-size: 1.1em;">Any contribution</p>
-    </div>
-    <button onclick="openRegistry('Japan Honeymoon', 'Any Amount')" style="background: #fce4ec; border: 1px solid #000; padding: 10px 20px; cursor: pointer; font-family: inherit; margin-top: 10px;">Contribute</button>
-  </div>
-
-</div>
-
-<div id="registryModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:30px; border:2px solid #000; z-index:1000; box-shadow: 10px 10px 0px #fce4ec; width: 90%; max-width: 400px;">
-  <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-    <h2 id="modalTitle" style="margin-top: 0;">Claim Item</h2>
-    <p style="font-size: 0.9em;">Enter your details and we will email you our bank or PayPal info!</p>
-    
-    <input type="hidden" name="Item_Name" id="hiddenItemName">
-    <input type="hidden" name="Price" id="hiddenPrice">
-    
-    <input type="text" name="name" placeholder="Your Name" required style="width:100%; margin-bottom:10px; padding:10px; border: 1px solid #000;">
-    <input type="email" name="email" placeholder="Your Email" required style="width:100%; margin-bottom:10px; padding:10px; border: 1px solid #000;">
-    
-    <button type="submit" style="background:#000; color:#fff; padding:12px; width:100%; border: none; cursor: pointer; font-weight: bold;">I want to gift this!</button>
-    
-    <p onclick="closeRegistry()" style="cursor:pointer; text-decoration:underline; font-size:12px; margin-top:15px; text-align: center;">Nevermind, take me back</p>
-  </form>
-</div>
-
-<div id="modalOverlay" onclick="closeRegistry()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
-
-<script>
-  function openRegistry(name, price) {
-    document.getElementById('registryModal').style.display = 'block';
-    document.getElementById('modalOverlay').style.display = 'block';
-    document.getElementById('modalTitle').innerText = "Gift: " + name;
-    document.getElementById('hiddenItemName').value = name;
-    document.getElementById('hiddenPrice').value = price;
-  }
-  function closeRegistry() {
-    document.getElementById('registryModal').style.display = 'none';
-    document.getElementById('modalOverlay').style.display = 'none';
-  }
-</script>
 
 <div class="clouds-background">
     <div class="cloud c1 pos1"></div>
